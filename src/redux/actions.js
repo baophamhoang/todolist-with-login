@@ -1,8 +1,24 @@
-import { ADD_DATA } from "./actionTypes"
+import { 
+    ADD_DATA,
+    ADD_TASK,
+    CHECK_TODO
+ } from "./actionTypes"
 
 export const addData = (payload) => {
     return ({
         type: ADD_DATA,
+        payload
+    })
+}
+export const addTask = (payload) => {
+    return ({
+        type: ADD_TASK,
+        payload
+    })
+}
+export const checkTodo = (payload) => {
+    return ({
+        type: CHECK_TODO,
         payload
     })
 }

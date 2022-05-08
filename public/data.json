@@ -9,7 +9,7 @@
                     "id": 0,
                     "name": "Wake up",
                     "description": "Tell me to wake up",
-                    "checked": false
+                    "checked": true
                 },
                 {
                     "id": 1,

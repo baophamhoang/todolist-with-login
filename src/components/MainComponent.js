@@ -22,7 +22,6 @@ function Main(){
     }
     useEffect(()=>{
         fetchData();
-        console.log('test');
     },[]);
 
     if (!token){
