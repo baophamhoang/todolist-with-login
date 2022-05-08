@@ -1,4 +1,4 @@
-import { ADD_DATA, CHECK_TODO } from "./actionTypes";
+import { ADD_DATA, ADD_TASK, CHECK_TODO } from "./actionTypes";
 import _ from 'lodash';
 
 const reducer = (state = null, action) => {
@@ -9,15 +9,26 @@ const reducer = (state = null, action) => {
                 data: action.payload
             }
         case CHECK_TODO: 
-            const newUsers = _.clone(state.data.users);
-            const user = newUsers.find(u=>u.id ===action.payload.user);
-            const newTask = user.tasks.find(t=>t.id===action.payload.taskId);
-            newTask.checked = !newTask.checked;
+            const tasks = _.clone(state.data.tasks);
+            const task = tasks.find(t=>t.id===action.payload)
+            task.checked = !task.checked;
             return {
                 ...state,
                 data: {
                     ...state.data,
-                    users: newUsers
+                    tasks: tasks
+                }
+            }
+        case ADD_TASK:
+            
+            return {
+                ...state, 
+                data: {
+                    ...state.data,
+                    tasks: [
+                        ...state.data.tasks,
+                        action.payload
+                    ]
                 }
             }
         default:

@@ -3,41 +3,43 @@
         {
             "id": 0,
             "username":"Pham Bao",
-            "password":"Thaobede",
-            "tasks": [
-                {
-                    "id": 0,
-                    "name": "Wake up",
-                    "description": "Tell me to wake up",
-                    "checked": true
-                },
-                {
-                    "id": 1,
-                    "name": "Learn Reactjs",
-                    "description": "Time to learn ReactJS",
-                    "checked": false
-                }
-            ]
-
+            "password":"Thaobede"
         },
         {
             "id": 1,
             "username":"Dam Thao",
-            "password":"baodeptry",
-            "tasks": [
-                {
-                    "id": 0,
-                    "name": "Wake up",
-                    "description": "Tell me to wake up",
-                    "checked": false
-                },
-                {
-                    "id": 1,
-                    "name": "Learn Reactjs",
-                    "description": "Time to learn ReactJS",
-                    "checked": false
-                }
-            ]
+            "password":"baodeptry"
+        }
+    ],
+    "tasks": [
+        {
+            "id": 0,
+            "name": "Wake up",
+            "userId": 0,
+            "description": "Tell me to wake up",
+            "checked": true
+        },
+        {
+            "id": 1,
+            "name": "Learn Reactjs",
+            "userId": 0,
+            "description": "Time to learn ReactJS",
+            "checked": false
+        },
+        {
+            "id": 2,
+            "name": "Wake up",
+            "userId": 1,
+            "description": "Tell me to wake up",
+            "checked": true
+        },
+        {
+            "id": 3,
+            "name": "Wake up",
+            "userId": 1,
+            "description": "Tell me to wake up",
+            "checked": true
         }
     ]
+
 }

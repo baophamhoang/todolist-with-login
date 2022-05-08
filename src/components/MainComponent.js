@@ -31,7 +31,7 @@ function Main(){
     }
     return (
         <div className='App'>
-            <Home data={token} setToken={setToken}/>
+            <Home user={token} setToken={setToken}/>
         </div>
     )
 }

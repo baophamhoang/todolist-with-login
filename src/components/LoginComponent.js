@@ -17,7 +17,6 @@ const database = {
 }
 function Login({setToken, data}){
     const [formValue, setFormValue] = useState(initalForm)
-    console.log(data);
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         setFormValue({
