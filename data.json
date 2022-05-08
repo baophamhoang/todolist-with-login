@@ -1,0 +1,45 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "username":"Pham Bao",
+            "password":"Thaobede"
+        },
+        {
+            "id": 1,
+            "username":"Dam Thao",
+            "password":"baodeptry"
+        }
+    ],
+    "tasks": [
+        {
+            "id": 0,
+            "name": "Wake up",
+            "userId": 0,
+            "description": "Tell me to wake up",
+            "checked": true
+        },
+        {
+            "id": 1,
+            "name": "Learn Reactjs",
+            "userId": 0,
+            "description": "Time to learn ReactJS",
+            "checked": false
+        },
+        {
+            "id": 2,
+            "name": "Wake up",
+            "userId": 1,
+            "description": "Tell me to wake up",
+            "checked": true
+        },
+        {
+            "id": 3,
+            "name": "Wake up",
+            "userId": 1,
+            "description": "Tell me to wake up",
+            "checked": true
+        }
+    ]
+
+}
