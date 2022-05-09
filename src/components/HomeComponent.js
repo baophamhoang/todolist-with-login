@@ -4,6 +4,7 @@ import { addTask, checkTodo } from "../redux/actions";
 import { useSelector } from "react-redux";
 import {taskSelector} from '../redux/selectors'
 
+
 function Home({user, setToken}){
     const handleLogOut = () => {
         setToken(null)
@@ -15,6 +16,38 @@ function Home({user, setToken}){
     }
     const handleAddTaskBtn = () => {
         // dispatch(addTask())
+        const addTaskBtn =  document.querySelector('.add-task-input');
+        if (addTaskBtn.childNodes[0].value.length>0){
+            dispatch(addTask({
+                id: tasks.length,
+                name: addTaskBtn.childNodes[0].value,
+                userId: user.id,
+                description: '',
+                checked: false
+            }))
+            addTaskBtn.childNodes[0].value='';
+            addTaskBtn.childNodes[0].focus();
+        }
+        else {
+            if (addTaskBtn.classList.contains('show')){
+                addTaskBtn.classList.remove('active');
+                addTaskBtn.classList.add('fading');
+                setTimeout(() => {
+                    addTaskBtn.classList.remove('show');
+                }, 700);
+            }
+            else{
+                if (addTaskBtn.classList.contains('fading')){
+                    addTaskBtn.classList.remove('fading')
+                }
+                addTaskBtn.classList.add('show');
+                setTimeout(() => {
+                    addTaskBtn.classList.add('active');
+                }, 0);
+                addTaskBtn.childNodes[0].focus();
+            }
+        }
+        
     }
     return (
         <div className="container">
@@ -41,9 +74,13 @@ function Home({user, setToken}){
                         </div>
                     ))}
                 </div>
-                <div className="row">
-                    <div className="col-12">
-                        <button className="btn btn-danger" onSubmit={handleAddTaskBtn}>Add Task</button>
+                <div className="row mt-1">
+                    <div className="col-7 add-task-input">
+                        <input className="form-control" type="text" id='add-task' placeholder="Type new task.."/>
+                        {/* <label className="form-control" htmlFor="add-task">Type new task</label> */}
+                    </div>
+                    <div className="col-5">    
+                        <button className="btn btn-danger" onClick={handleAddTaskBtn}>Add Task</button>
                     </div>
                 </div>
             </div>

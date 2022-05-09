@@ -34,3 +34,20 @@
 .task-done{
   text-decoration: line-through;
 }
+
+.add-task-input{
+  display: none;
+  width: 0!important;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.add-task-input.show{
+  display: block;
+}
+.add-task-input.active{
+  width: 58.3333333333%!important;
+}
+.add-task-input.fading{
+  opacity: 0;
+  padding: 0;
+}
