@@ -38,7 +38,7 @@
 .add-task-input{
   display: none;
   width: 0!important;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
 .add-task-input.show{

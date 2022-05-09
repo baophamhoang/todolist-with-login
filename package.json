@@ -2,7 +2,7 @@
   "name": "todolist-with-login",
   "version": "0.1.0",
   "private": true,
-  "homepage": "baophamhoang.github.io/todolist-with-login",
+  "homepage": "https://baophamhoang.github.io/todolist-with-login",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",

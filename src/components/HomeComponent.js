@@ -34,7 +34,7 @@ function Home({user, setToken}){
                 addTaskBtn.classList.add('fading');
                 setTimeout(() => {
                     addTaskBtn.classList.remove('show');
-                }, 700);
+                }, 500);
             }
             else{
                 if (addTaskBtn.classList.contains('fading')){
